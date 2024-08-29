@@ -5,7 +5,6 @@ const daysOfWeek = ['Воскресенье', 'Понедельник', 'Вто�
 
 export default function notice(offset, msgDefaultOffset, titles, fields) {
   const now = new Date();
-  now.setHours(now.getHours() + offset);
   return new EmbedBuilder().setColor(randomColor()).setTitle(choice(titles))
     .addFields({ name: 'Сегодня',
       value: `${now.toLocaleString('ru-RU')}${msgDefaultOffset}. ${daysOfWeek[now.getDay()]} `
